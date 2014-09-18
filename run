@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PORT=${PORT:-"8118"}
+
+sed -i 's/8118/'"$PORT"'/g' /etc/privoxy/config
+
+exec /usr/bin/supervisord
+
